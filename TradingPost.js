@@ -26,7 +26,13 @@ slider.addEventListener("input", updateResult);
 additionalValue.addEventListener("input", updateResult);
 offerInput.addEventListener("input", calculateOfferResult);
 
+function toComma(num) {
+    num = num.replace(/,/gi, "");
+    return num.split(/(?=(?:\d{3})+$)/).join(",");
+}
+
 function updateResult() {
+    additionalValue.value = toComma(additionalValue.value);
     const sliderAmount = parseInt(slider.value) * 600000;
     const additionalAmount = parseFormattedNumber(additionalValue.value) || 0;
     const totalAmount = sliderAmount + additionalAmount;
@@ -49,6 +55,7 @@ function updateResult() {
 }
 
 function calculateOfferResult() {
+    offerInput.value = toComma(offerInput.value);
     const offer = parseFormattedNumber(offerInput.value);
     let x, y;
     if (isNaN(offer)) {
@@ -65,7 +72,7 @@ function calculateOfferResult() {
             y--;
         }
     } else {
-        offerResult.innerHTML = `TP limit is 2m + 10 items. Set up an <a href="https://www.neopets.com/auctions.phtml">Auction</a> instead`;
+        offerResult.innerHTML = `TP limit is 2m + 10 items. Set up an <a href="https://www.neopets.com/auctions.phtml">Auction</a> instead or use a different set of items`;
         return;
     }
     offerResult.innerHTML = `You should offer ${x.toLocaleString()} Nps and ${y} Baby Paint Brushes.`;
