@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Post Baby Paint Brush Calculator</title>
+<link rel="stylesheet" href="TradingPost.css">
+</head>
+<body>
+    <header>
+        <h1>Baby Paint Brush Calculator</h1>
+    </header>
+    <div class="container">
+        <input type="radio" name="body" value="calculator" checked> Nps to Brushes
+        <input type="radio" name="body" value="slider"> Brushes to Nps
+        <div id="calculator-body">
+            <p>Offer: <input type="text" id="offer" placeholder="Enter offer"></p>
+            <p id="offer-result">You should offer 0 Nps and 0 Baby Paint Brushes.</p>
+            <div id="image-container2"><img src="https://images.neopets.com/items/invisiblepntbrsh.gif"></div>
+        </div>
+        <div id="slider-body" class="hidden">
+            <input type="range" min="0" max="10" value="0" id="slider">
+            <p id="slider-value">Baby Paint Brush: 0</p>
+            <input type="text" id="additional-value" placeholder="Enter additional value">
+            <p>The total value is <span id="result" placeholder="0"></span> Nps</p>
+            <div id="image-container"><img src="https://images.neopets.com/items/invisiblepntbrsh.gif"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="text-center p-4">
+            <p>© 1999-2024 Neopets, Inc. All rights reserved.<br> 
+                <figcaption class="blockquote-footer">
+                  <br>This is an unauthorized fan site (v3.29.2024)
+                  <p>Questions? Concerns? Ideas? DM @eddwith3ds on discord</p>
+                  <a href="https://www.neopets.com/auctions.phtml">Edd's Goodies</a>
+                  <a href="https://edd4569.github.io/Mystery-Solving/">Mystery Solving</a>
+                </figcaption>
+        </div>
+    </footer>
+    <script src="TradingPost.js"></script>
+</body>
+</html>

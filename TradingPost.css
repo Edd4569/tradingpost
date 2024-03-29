@@ -1,0 +1,43 @@
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header, footer {
+        background-color: #299E8E;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .container {
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    #image-container, #image-container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    #image-container img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+
+    #image-container2 img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
